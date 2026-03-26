@@ -1,36 +1,70 @@
-# budget-tracker
+# ANALYTICAL BUDGET TRACKER
 
-Scaffolded with Vuetify CLI.
+### A budget tracker that allows you to record your income and expenses onto a table, and to visualize it via the Analytics
 
-## ❗️ Documentation
+## BUDGET INPUT 
+![img.png](img.png)
+### Enter your name
+- It may only contain uppercase, lowercase and spaces, up to 20 characters
+- Default name is 'You'
+### Enter the date of your budget
+- Enter the month and year the budget is based on
+- The year ranges from 2000 to 2050
+### Enter your income and expenses
+- Again, the income/expense name may only contain uppercase, lowercase and spaces, up to 25 characters
+- You may not enter an existing name (see the tables to be sure of this)
+- The amount you are allowed to enter ranges from 1 to 1 000 000
 
-- Primary docs: https://vuetifyjs.com/
-- Getting started guide: https://vuetifyjs.com/en/getting-started/installation/
-- Community support: https://community.vuetifyjs.com/
-- Issue tracker: https://issues.vuetifyjs.com/
+## BUDGET TABLES
+![img_1.png](img_1.png)
+## Budget Info Text
+  - Contains your **name**, and **the date** of the budget
+  - Format: **Budget for [Your name] of [Date of budget]**
+## Tables
+  - Has an income/expense name column, and the column for the amount
+## Options
+  - These only affect the table above them
+1. **Edit**
+   - Toggle the Delete button on the tables to delete each individual entry on the table
+2. **Delete entire table**
+   - Deletes all entries
+3. **Save**
+   - Saves the entries into a JSON file to be loaded into the app again
+4. **Load**
+   - This loads in a JSON file to add entries seamlessly
+   - If the JSON file has invalid contents, you will be notified
+   - The correct format in TypeScript: [{name: string, amount: number}]
+
+# Budget Analysis
+![img_2.png](img_2.png)
+## What is being analyzed
+1. Income
+   - Distribution: Overview of all sources
+   - Average Income Amount
+   - Lowest Income Amount
+   - Highest Income Amount
+2. Expenses
+   - Distribution: Overview of all items
+   - Average Expense Cost
+   - Lowest Expense Cost
+   - Highest Expense Cost
+3. Income and Expenses
+   - An overview of total income AND expenses amounts
+4. Verdict
+   - Lays out total income and expense amounts again
+   - Shows how much money you would be left with
+   - **SURPLUS (Dark Green)** - Leftover money > 0
+   - **BREAKTHROUGH (Orange)** - Leftover money = 0
+   - **DEFICIT (Red)** - Leftover money < 0
 
 ## 🧱 Stack
 
 - Framework: Vue 3 + Vite
 - UI Library: Vuetify
+- Charts: ApexCharts
 - Language: TypeScript
 - Package manager: npm
 
-## 🧭 Start Here
-
-- Main entry: `src/main.ts`
-- Main app component: `src/App.vue`
-- Main styles: `src/styles/`
-- Plugin setup: `src/plugins/`
-
-## 📁 Project Structure
-
-- `src/main.ts` — application entry point
-- `src/App.vue` — root component
-- `src/components/` — reusable Vue components
-- `src/plugins/` — plugin registration and setup
-- `src/styles/` — global styles and theme settings
-- `public/` — static public files
 
 ## ✨ Enabled Features
 
@@ -58,22 +92,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-## 🧪 Available Scripts
-
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
-- `npm run build-only`
-- `npm run type-check`
-- `npm run lint`
-- `npm run lint:fix`
-
-## 💪 Support Vuetify Development
-
-This project uses Vuetify - an MIT licensed Open Source project. We are glad to welcome contributors and any support for ongoing development:
-
-- Contribute to Vuetify and ecosystem projects: https://github.com/vuetifyjs
-- Request enterprise support: https://support.vuetifyjs.com/
-- Sponsor on GitHub: https://github.com/sponsors/vuetifyjs
-- Support on Open Collective: https://opencollective.com/vuetify

@@ -1,7 +1,7 @@
 # 💰 ANALYTICAL BUDGET TRACKER
 
 ### A budget tracker that allows you to record your income and expenses onto a table, and to visualize it via the Analytics
-
+### Link to live app: https://analytical-budget-tracker.pages.dev/
 ## BUDGET INPUT 
 ![img.png](img.png)
 ### Enter your name

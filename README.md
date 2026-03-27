@@ -1,4 +1,4 @@
-# ANALYTICAL BUDGET TRACKER
+# 💰 ANALYTICAL BUDGET TRACKER
 
 ### A budget tracker that allows you to record your income and expenses onto a table, and to visualize it via the Analytics
 

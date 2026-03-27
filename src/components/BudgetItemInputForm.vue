@@ -48,7 +48,7 @@
   <h3>Add Income</h3>
   <v-form ref="form" v-model="incomeFormStatus" @submit.prevent="onIncomeFormSubmit">
     <v-row>
-      <v-col>
+      <v-col cols="12" md="6" xs="12">
         <v-text-field
           v-model="incomeName"
           :counter="25"
@@ -58,7 +58,7 @@
           variant="outlined"
         />
       </v-col>
-      <v-col>
+      <v-col cols="12" md="6" xs="12">
         <v-number-input
           v-model="incomeAmount"
           control-variant="stacked"
@@ -82,7 +82,7 @@
   <h3>Add Expenses</h3>
   <v-form ref="form" v-model="expenseFormStatus" @submit.prevent="onExpenseFormSubmit">
     <v-row>
-      <v-col>
+      <v-col cols="12" md="6" xs="12">
         <v-text-field
           v-model="expenseName"
           :counter="25"
@@ -92,7 +92,7 @@
           variant="outlined"
         />
       </v-col>
-      <v-col>
+      <v-col cols="12" md="6" xs="12">
         <v-number-input
           v-model="expenseAmount"
           control-variant="stacked"

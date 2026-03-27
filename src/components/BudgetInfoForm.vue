@@ -9,11 +9,15 @@
     (v: string) => (v && v.length <= 20 && v.length >= 3) || 'Your name must be 3 - 20 characters',
     (v: string) => (v.match(regexPattern) !== null || 'Your name cannot contain any numbers or special symbols'),
   ])
-  const Years: Array<number> = []
-  for (let i = 2000; i < 2051; i++) Years.push(i)
+  const Years: Array<string> = []
+  for (let i = 2000; i < 2051; i++) Years.push(i.toString())
   const store = useBudgetStore()
   const personName: Ref<string> = ref('')
   const formStatus: Ref<boolean | null> = ref(null)
+  const comboBoxDateMapping: Array<{ varref: string, items: Array<string>, label: string }> = [
+    { varref: store.budgetMonth, items: Months, label: "Budget Month"},
+    { varref: store.budgetYear.toString(),  items: Years, label: "Budget Year"},
+  ]
 
   function submitName () {
     if (formStatus.value) {
@@ -39,19 +43,11 @@
   </v-form>
   <h2>Date of Budget</h2>
   <v-row>
-    <v-col>
+    <v-col v-for="n in 2" :key="n" cols="12" md="6" xs="12">
       <v-combobox
-        v-model="store.budgetMonth"
-        :items="Months"
-        label="Budget Month"
-        variant="outlined"
-      />
-    </v-col>
-    <v-col>
-      <v-combobox
-        v-model="store. budgetYear"
-        :items="Years"
-        label="Budget Year"
+        v-model="comboBoxDateMapping[n-1].varref"
+        :items="comboBoxDateMapping[n-1].items"
+        :label="comboBoxDateMapping[n-1].label"
         variant="outlined"
       />
     </v-col>

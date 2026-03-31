@@ -1,5 +1,4 @@
 <template>
-  <v-app>
     <v-layout>
       <v-navigation-drawer
         expand-on-hover
@@ -21,12 +20,12 @@
           <v-list-item prepend-icon="mdi-chart-arc" title="Budget Analytics" to="/analytics" value="analytics" />
         </v-list>
       </v-navigation-drawer>
-
+      <v-app>
       <v-main>
         <router-view />
       </v-main>
+        </v-app>
     </v-layout>
-  </v-app>
 </template>
 
 <script lang="ts" setup>
